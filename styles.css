@@ -1,0 +1,1163 @@
+:root {
+    --font-Libre: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-style: normal;
+  
+    --font-varela: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+    --font-smooch: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+  
+    --font-ptserif: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+    --font-ptbold: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  
+    --font-mont:  "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+  
+  
+    --font-lora: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+  
+  
+  
+    /* colour */
+    --colour-bg: #F8F9FF;
+    --colour-main: #1E293B;
+    --colour-dark: color: #02172b;
+    --colour-fade:  #C0CFD9;
+  
+  
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'Font-Mandrel'; /* Give your font a name */
+    src: url('Mandrel-NosrReg.otf') format('opentype'); /* Path to the .otf file */
+    font-weight: 500; /* or bold, 400, 700, etc. */
+    font-style: normal; /* or italic, oblique, etc. */
+  }
+  
+  
+  
+  html {
+    font-size: 10px;
+  }
+  
+  
+  
+  /* General Styles */
+  body {
+    margin: 0;
+    font-family: 'Lora', sans-serif;
+    line-height: 1.6; /* Improves readability */
+    color: var(--colour-main);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--colour-main);
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--colour-main); /* Darker blue on hover */
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.32rem 3.2rem; /* converted rem values */
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 1.8rem; /* converted rem values */
+    margin-left: 6rem;
+    margin-top: 0.3rem;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color:  var(--colour-main);
+  }
+  
+  .nav-links {
+    list-style: none;
+    font-size: 1.21rem; /* converted rem values */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 6rem; /* converted rem values */
+  }
+  
+  .nav-links li {
+    margin-left: -1rem; /* converted rem values */
+    margin-right: 5.8rem; /* converted rem values */
+    margin-top: 0.3rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  }
+  
+  
+  .nav-links li button {
+    background-color: #ffffff00;
+    border: #ffffff00;
+    
+  }
+  
+  .nav-contact-button {
+    font-size: 1.18rem; 
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    padding: 0.35rem 1.675rem; /* converted rem values */
+    border-radius: 2rem;
+    border: 0.2rem solid  var(--colour-main); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-contact-button:hover {
+    background-color:  var(--colour-main);
+    color: white;
+  }
+  
+  .menu-button {
+    display: none; /* Hide by default on larger screens */
+    background: none;
+    border: none;
+    font-size: 1.83rem; /* converted rem values */ /* Make button bigger on mobile */
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 5.16rem; /* converted rem values */ /* Push button to the right */
+  }
+
+  
+
+
+@media screen and (max-width: 1000px){
+
+
+
+    nav .nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Align vertically when shown */
+        text-align: center; /* Center text in mobile menu */
+        width: 100%; /* Full width */
+        position: absolute;
+        top: 7rem; /* Position below the nav bar */
+        left: 0; /* Cover entire width */
+        background-color: #fff;
+        padding: 2.24rem 0; /* converted rem values */
+        border-bottom: 0.2rem solid #ccc;
+      }
+    
+      .logo {
+        margin-left: -1rem;
+      }
+
+      .nav-links.show-menu {
+        display: flex;
+        color: var(--colour-main);
+      }
+    
+      .nav-links li {
+        margin: 1.6rem 0; /* converted rem values */
+        margin-right: 5.76rem; /* converted rem values */
+      }
+    
+      nav .menu-button {
+        display: block;
+      }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Basic Styling */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;  /* Default font for the body */
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem; /* Adds padding to the sides of the container */
+}
+
+
+/* Hero Section */
+
+
+.hero {
+    background: linear-gradient(to bottom, var(--colour-bg), #FFFFFF);    padding: 10rem 0;  /*consistent spacing*/
+
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+
+
+
+.hero-text {
+    flex: 1;
+    margin-top: 0rem;
+     margin-right: 4rem;
+
+
+}
+
+
+.hero .job {
+    font-size: 1.2rem;
+    font-family: var(--font-varela), var(--font-Libre);
+    text-transform: uppercase;
+    font-weight: 400;    word-spacing: 0.42rem;
+    text-transform: uppercase;
+    color: var(--colour-main);
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.2rem;
+}
+
+
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+    font-size: 3.8rem; /* Slightly smaller heading */
+    font-weight: bold;
+    color: var(--colour-main);;
+    line-height: 1.6; /* Adjusts line height for better spacing */
+    margin-bottom: 3.8rem;
+    max-width: 76%;
+}
+
+
+
+.hero p {
+  font-size: 1.8rem;
+    color: var(--colour-main);
+    line-height: 1.7;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+    margin-bottom: 5.6rem;
+    max-width: 50rem;
+}
+
+
+/* Call to Action Button */
+
+
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: -1rem;
+    gap: 2rem; /* Space between button and icons */
+}
+
+
+
+.cta-button {
+    display: inline-block; /*makes it inline level*/
+    font-size: 1.6rem;
+    font-family: var(--font-lora);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    color: white;
+    background-color: var(--colour-main);
+    padding: 1rem 5.2rem;
+    border: 0.3rem solid;
+    border-radius: 2.5rem;
+     text-decoration: none;  /* Removes underline */
+    transition: background-color 0.3s ease;
+}
+
+
+.cta-button.primary:hover {
+  background-color: #ffffff;
+  color: var(--colour-main);
+}
+
+
+
+/* Social Media Icons */
+
+
+
+.social-icons {
+    display: flex;
+    margin-top: 0.4rem;
+    margin-left: 6rem;
+    gap: 2.8rem; /* Space between icons */
+    align-items: center;
+  }
+  
+  .social-icons img {
+    max-width: 30px;  /* Adjust size as needed */
+    max-height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+  }
+  
+
+
+.profile-image {
+  width: 36rem;
+  height: 36rem;
+  margin-top: 4.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide content that overflows */
+
+}
+
+
+.profile-image img{ /* Ensures image responsiveness */
+
+      max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+
+
+
+@media screen and (min-width: 1000px) and (max-width:1120px) {
+  
+
+  .hero .job{
+    font-size: 0.9rem;
+  }
+
+
+  .hero h1 {
+    font-size: 3rem; /* Slightly smaller heading */
+    max-width: 90%;
+  }
+
+  .hero p {
+    max-width: 90%;
+  }
+
+
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 4rem;
+  }
+
+  
+  .cta-container {
+  gap: 0.2rem;
+  }
+
+
+  .social-icons {
+    gap: 2rem;
+  }
+
+  .social-icons img {
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+
+}
+
+
+
+@media (max-width: 992px) {
+
+
+
+    .cta-container {
+        flex-direction: column; /* Stack elements on smaller screens */
+        align-items: center;
+        margin-bottom: -4rem;
+    }
+
+
+    .hero .container {
+      flex-direction: column-reverse;  /*stack elements*/
+        text-align: center;  /*center align text*/
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+    }
+
+
+  .hero-text {
+        margin-bottom: 4rem;   /* Space between text and image*/
+        margin-right: 0; /*removes margin*/
+
+
+    }
+
+    .hero h1 {
+        font-size: 3.6rem; /* Slightly smaller heading */
+        max-width: 100%;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    .hero p {
+      font-family: var(--font-varela), var(--font-Libre);
+      font-weight: 300;
+        max-width: 100%;
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    
+    .social-icons {
+        margin-left: 0rem;
+        margin-top: 2rem;
+        gap: 2.8rem; 
+    }
+
+
+ .profile-image {
+        width: 25rem;
+        height: 25rem;  /*Adjusts image size*/
+        margin-top: 0rem;
+
+    }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+    .cta-container {
+            flex-direction: column; /* Stack elements on smaller screens */
+            align-items: center;
+    }
+
+        
+
+    .contact-button {
+        display: block;  /*button takes full width */
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+
+    .hero h1 {
+      margin-top: 4.5rem;
+        font-size: 3rem;
+        padding: 0 0 0 0;
+    }
+
+
+    .hero p {
+      padding: 0 0 0 0;
+    }
+
+
+    .profile-image {
+        width: 20rem;  /*adjusts image size */
+        height: 20rem;
+        
+    }
+
+
+    .social-icons {
+        margin-left: 1rem;
+    }
+
+    .social-icons a {
+        margin: 1rem 0.5rem; /* Adjusts spacing for smaller screens */
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Specialization Section */
+
+
+.specialization {
+    padding: 12rem 5rem; /* converted rem values */
+    background-color: var(--colour-bg);
+    text-align: center;
+  }
+  
+  .section-heading h2 {
+    font-size: 2.8rem; /* converted rem values */
+    font-family: Font-Mandrel , var(--font-ptserif) ;
+    font-weight: 500;
+    color: var(--colour-main);
+    margin-top: -2rem; /* converted rem values */
+    margin-bottom: 5.8rem; /* converted rem values */ /* Increased margin */
+    text-align: centre;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6.88rem; /* converted rem values */
+  }
+  
+  
+  .card {
+    background-color: #fff;
+    border-radius: 1.4rem;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1); /* More defined shadow */
+    padding: 2.78rem 2.44rem; /* converted rem values */ /* Increased padding */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.03) ; /* Less dramatic scaling */
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover*/
+    background-color: var(--colour-main);
+    color: #ffffff;
+    .line {
+      background-color: #ffffff;
+    }
+    .card-h {
+      color: #ffffff;
+     }
+
+    .card p {
+      color: #ffffff;
+    }
+    
+  }
+  
+  
+  .line {
+    width: 4rem; /* converted rem values */
+    height: 0.2rem;
+    background-color: #0a254b;
+    margin-left: 1.6rem;
+    margin-bottom: 2.24rem; /* converted rem values */
+    border-radius: 0.3rem;
+  }
+  
+  .card h3 {
+    font-size: 2.4rem; /* converted rem values */
+    font-family: Font-Mandrel;
+    font-weight: 500;
+    color: var(--colour-dark);
+    margin-top: 1.6rem; /* converted rem values */
+    margin-bottom: 1.6rem; /* converted rem values */
+    margin-left: 1.6rem;
+  }
+  
+  .card p {
+    font-size: 1.5rem; /* converted rem values */
+    font-family: var(--font-varela);
+    font-weight: 500;
+    color: var(--colour-dark);
+    margin-left: 1.6rem;
+    margin-bottom: 2.24rem; /* converted rem values */
+  }
+  
+  
+  .services-button {
+    display: inline-block;
+    margin-top: 6.4rem; /* converted rem values */
+    background-color: var(--colour-main);
+    color: white;
+    font-size: 1.6rem; /* converted rem values */
+    padding: 0.72rem 3.2rem; /* converted rem values */
+    border: 0.3rem solid;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1rem rgba(30, 58, 102, 0.2); /* More visible shadow */
+    transition: background-color 0.04s ease;
+  }
+  
+  .services-button:hover {
+    background-color: #f8fbff; /* Darker blue */
+    color: var(--colour-main);
+  }
+  
+
+
+
+
+  @media screen and (max-width: 768px) {
+
+
+    .grid-container {
+      grid-template-columns: 1fr; /* One column layout */
+    }
+
+
+    .specialization {
+      padding-top: 10rem;
+    }
+
+}
+
+
+
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  }
+  
+
+
+  @media screen and (max-width: 480px) {
+
+    
+
+  .text-content {
+    margin-top: -4rem;
+  }
+
+
+  .text-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .text-content p {
+    font-size: 1.56rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* About Me Section Styles */
+
+
+  .about-main {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    background-color: var(--colour-bg) ;
+  }
+
+  
+  .about-section {
+    background-color: var(--colour-main);
+    padding: 8.4rem 4rem;
+    border-radius: 6rem;
+    overflow: hidden; /* Ensures rounded corners are not clipped by content */
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    gap: 5rem;
+  }
+
+
+  
+  /* Image Container Styles */
+  .image-container {
+    width: 40rem;
+  }
+  
+  .image-container img {
+    width: 84%; /* Ensures image fills the container */
+    height: auto;
+    box-shadow: 0px 0.2rem 1rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+
+  
+  /*text content style*/
+  .text-content {
+    max-width: 60rem; /*added to restrict the width of text*/
+  }
+  
+  .about-subheading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--colour-fade);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase; /* ensures uppercase text */
+    margin-bottom: 1rem; /* Adds spacing below the subheading*/
+  }
+  
+  .text-content h2 {
+    font-family: var(--font-ptserif);
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: white;
+    line-height: 1.4;
+    margin-bottom: 3.2rem; /* converted rem values */
+  }
+  
+  .description {
+    font-family: var(--font-Libre);
+    font-size: 1.6rem;
+    color: var(--colour-fade);
+    line-height: 1.6;
+    margin-bottom: 3.6rem; /* Adjusted margin-bottom for better spacing */
+  }
+  
+  .more-link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+    border: white solid;
+    padding: 0.4rem 1.6rem;
+    text-decoration: none; /*removes default underline from anchor tag */
+    /* border-bottom: 0.1rem solid transparent; sets up for hover effect */
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .more-link:hover {
+    color: #0a254b;
+    background-color: #ffffff;
+    font-weight: 600;
+    border-color: #0a254b; /*underline on hover*/
+  }
+  
+
+
+
+
+  @media screen and (max-width: 1000px) {
+
+
+    .content {
+        flex-direction: column; /* Stacks image and text vertically on smaller screens */
+        text-align: center; /* Centers text content */
+      }
+    
+      .image-container {
+        width: 90%;
+        max-width: 40rem; /* Ensures image doesn't exceed a certain width */
+        margin-bottom: 3rem; /* Adds space between image and text */
+      }
+    
+    
+      .description {
+        margin-bottom: 5rem; /* Adjusted margin-bottom for better spacing */
+      }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section Styles */
+
+
+.contact {
+    background-color: var(--colour-bg);
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .container-4 {
+    max-width: 700px;
+    margin: 0 auto; /* Centers the container */
+    margin-bottom: 40px;
+  }
+  
+  .contact-subheading {
+    font-family: var(--font-lora);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--colour-main);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .contact h2 {
+    font-family: "Playfair Display", serif;  /* Note the font-family change */
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--colour-main);;
+    margin-bottom: 15px;
+  }
+  
+  .supporting-text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--colour-main);
+    max-width: 600px;
+    margin: 0 auto 30px; /* Centered margin */
+    line-height: 1.5;
+  }
+  
+  .container-4 button {
+    background-color: #ffffff00;
+    border: #ffffff00; ;
+  }
+  
+  .contact-button-2 {
+    background-color: var(--colour-main);
+    color: #fff;
+    letter-spacing: 0.16rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    padding: 8px 40px;
+    border:  0.3rem solid var(--colour-main);
+    border-radius: 24px;
+    cursor: pointer;
+    display: inline-flex;    /* Enables inline flexbox for button and icon */
+    align-items: center;    /* Vertically aligns button text and icon */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+  }
+  
+  .contact-button-2:hover {
+    background-color: #f8fbff; /* Darker blue */
+    color: var(--colour-main);
+  }
+  
+  
+  
+  
+  /* .arrow-icon {
+    display: inline-block; Makes the arrow a block element
+    font-size: 18px;
+    color: white;
+    background-color: #1C2431;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  } */
+  
+  /* .contact-button:hover .arrow-icon{
+    transform: translateX(5px) scale(1.1); 
+  
+  } */
+  
+
+  
+  
+  
+  
+  /* Media Queries for Responsiveness - Adjust as needed */
+  @media (max-width: 576px) {
+    .contact {
+        padding: 80px 0; /* Reduced padding for smaller screens */
+    }
+    .contact h2 {
+        font-size: 28px; /* Slightly smaller heading */
+    }
+    .contact-button {
+        font-size: 14px;
+        padding: 10px 20px;    
+    }
+  
+  
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  /* Footer Styles */
+
+  
+  footer {
+    background-color: var(--colour-main);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    padding: 50px 0;
+   
+    bottom: 0; /* ensures it sticks to the bottom */
+    left: 0;
+    width: 100%;
+  
+  
+  }
+  
+  
+  .container-5 {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Distributes sections evenly */
+    flex-wrap: wrap;        /* Allows wrapping on smaller screens */
+  
+  }
+  
+  
+  .section {
+    flex-basis: calc(33.33% - 30px); /* Each section takes about 1/3 of the width */
+     margin-bottom: 30px;     /* Adds margin below each section on smaller screens */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  
+  }
+  
+  
+  
+  
+  /* Section 1: Branding */
+  
+  
+  .branding .icon {
+    font-size: 2em;
+    margin-right: 10px;   /*space between logo and name*/
+    display: inline-block;  /* Allows vertical alignment with text */
+    vertical-align: middle; /* Vertically aligns the icon */
+  
+  }
+  
+  
+  .branding .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;    /* Adjusts spacing below the name */
+  
+  }
+  
+  
+  .branding .description {
+    color: var(--colour-fade);
+  font-size: 14px;
+  font-weight: 400; /* Lighter font weight for description */
+  line-height: 1.8;
+  margin-top: 30px;
+  max-width: 70%;
+  
+  }
+  
+  
+  
+  /* Section 2: Navigation */
+
+
+  .navigation {
+    margin-left: 89px;
+  }
+  
+  
+  .navigation h3 {
+  font-size: 16px;
+  font-weight: 600;  /* Semi-bold */
+  margin-bottom: 15px;
+  }
+  
+  
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  .navigation li {
+    margin-bottom: 5px; /* Spacing between list items */
+  }
+  
+  
+  .navigation a {
+  text-decoration: none;
+  color: var(--colour-fade);
+  font-size: 14px;
+    transition: color 0.3s ease;
+  
+  }
+  
+  .navigation a:hover {
+    color: #ffffff;
+  
+  }
+  
+  
+  
+  /* Section 3: Contact Information */
+  
+  .contact-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  
+  }
+  
+  .contact-info p, .contact-info a {
+    font-size: 14px;
+    color: var(--colour-fade);
+    line-height: 1.6;
+  }
+  
+  
+  .contact-info .contact-link{
+    color: #3B82F6;
+    display: inline-block; /* To add margin */
+    margin-top: 10px;     /* Space between phone and link */
+    transition: color 0.3s ease;
+  
+  }
+  
+  
+  .contact-info .contact-link:hover{
+  
+  color: #2563eb;  /* Darker blue on hover */
+  }
+  
+  
+  .social-icons-2 {
+    margin-top: 20px;  /* Space above social icons */
+    text-align: center; /* Center icons */
+  }
+  
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 5px;  /*space between icons*/
+    transition: color 0.3s ease;
+  }
+  
+  
+  .social-icons i {
+  font-size: 20px;
+    color: white;
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+  
+  }
+  
+  
+  .social-icons a:hover i{
+    color: #ffffff;
+  
+  }
+  
+
+
+
+  
+  
+  /* Responsive Design */
+  
+  
+  @media (max-width: 1280px) {
+    .container-5 {
+      margin-left: 50px;
+    }
+  }
+  
+
+  
+  
+  
+  @media (max-width: 768px) {
+    .container-5 {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center;      /* Center text within sections */
+        margin-left: 0rem;
+  
+    }
+  
+    .section {
+        flex-basis: 100%;        /* Each section takes full width */
+        margin: 20px 0;        /*margin between sections*/
+    }
+     .branding .icon {
+        display: block;        /* Makes the icon a block element */
+        margin: 0 auto 10px;  /* Centers the icon */
+  
+    }
+  
+  
+    .branding .description {
+      max-width: 100%;
+    }
+  
+  
+     .social-icons{
+        text-align: center;
+    }
+  
+  }
